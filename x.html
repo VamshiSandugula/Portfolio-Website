@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Data Engineer</title>
+    <meta name="description"
+        content="Portfolio of an Aspiring Data Engineer specializing in Data Analytics, Cloud, and Machine Learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="profile-container">
+                <img src="images/profile.jpg" alt="Vamshi Sandugula" class="profile-img">
+                <div class="hero-text">
+                    <h1>Vamshi Sandugula</h1>
+                    <p class="subtitle">Aspiring Data Engineer | Data Analytics & Cloud Enthusiast</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/vamshi-sandugula/" target="_blank"
+                            class="social-btn">LinkedIn</a>
+                        <a href="https://github.com/VamshiSandugula" target="_blank" class="social-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Professional Summary -->
+        <section id="summary" class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="summary-container">
+                <div class="bio-section">
+                    <h3>Vamshi Sandugula</h3>
+                    <p class="education">Final Year Computer Science Student | Manipal Institute of Technology,
+                        Bengaluru</p>
+                    <p>
+                        I’m a final-year Computer Science student with a minor in Computational Intelligence, aspiring
+                        to become a Data Engineer. I have a strong foundation in designing and building data pipelines,
+                        managing cloud infrastructure, and integrating machine learning models into production systems.
+                        My technical experience includes leveraging AWS services, Python, and SQL to develop scalable
+                        ETL workflows and create data-driven solutions that deliver actionable business insights.
+                    </p>
+                    <p>
+                        I’m deeply passionate about transforming raw and complex data into meaningful insights that
+                        drive decisions. With a blend of analytical thinking and engineering skills, I aim to contribute
+                        to data-intensive projects that prioritize scalability, automation, and efficiency.
+                    </p>
+                </div>
+
+                <div class="tech-stack-section">
+                    <h3>Tech Stack</h3>
+                    <div class="tech-grid">
+                        <div class="tech-category">
+                            <h4>Programming Languages</h4>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Data Engineering & ETL</h4>
+                            <div class="tech-tags">
+                                <span>AWS Glue</span>
+                                <span>Pandas</span>
+                                <span>NumPy</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Databases</h4>
+                            <div class="tech-tags">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>MongoDB</span>
+                                <span>AWS Redshift</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Cloud & DevOps</h4>
+                            <div class="tech-tags">
+                                <span>AWS (S3, EC2, Lambda, RDS)</span>
+                                <span>Git</span>
+                                <span>CI/CD</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Machine Learning</h4>
+                            <div class="tech-tags">
+                                <span>Scikit-learn</span>
+                                <span>Jupyter Notebook</span>
+                            </div>
+                        </div>
+
+                        <div class="tech-category">
+                            <h4>Visualization</h4>
+                            <div class="tech-tags">
+                                <span>Power BI</span>
+                                <span>Matplotlib</span>
+                                <span>Seaborn</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-list">
+                <div class="experience-card" onclick="openModal('drdo')">
+                    <div class="exp-header">
+                        <h3>Machine Learning Intern</h3>
+                        <span class="company">DRDO</span>
+                        <span class="date"> Duration</span>
+                    </div>
+                    <p>
+                        Built end-to-end data pipelines for customer subscription prediction including data
+                        preprocessing, feature engineering, model training, and ROC-AUC evaluation.
+                    </p>
+                </div>
+                <!-- Add more experience items here as needed -->
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <div class="projects-grid">
+                <!-- Project: Fisheries Analytics -->
+                <div class="project-card" onclick="openModal('fisheries')">
+                    <div class="card-content">
+                        <h3>AWS Data Engineering Capstone</h3>
+                        <p>
+                            Designed and implemented a serverless data lake architecture on AWS to process and analyze
+                            global fisheries data from the Sea Around Us dataset.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tech-tag">AWS Glue</span>
+                        <span class="tech-tag">Athena</span>
+                        <span class="tech-tag">S3</span>
+                        <span class="tech-tag">PyArrow</span>
+                    </div>
+                </div>
+
+                <!-- Project: RAG Chatbot -->
+                <div class="project-card" onclick="openModal('rag-chatbot')">
+                    <div class="card-content">
+                        <h3>RAG-Based Chatbot</h3>
+                        <p>
+                            Developed a Retrieval-Augmented Generation (RAG) based personalized chatbot to deliver
+                            accurate, grounded, and domain-specific answers.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tech-tag">ChromaDB</span>
+                        <span class="tech-tag">LLMs</span>
+                    </div>
+                </div>
+
+                <!-- Project: Insurance Dashboard (Power BI) -->
+                <div class="project-card" onclick="openModal('insurance-dashboard')">
+                    <div class="card-content">
+                        <h3>Insurance Analytics Dashboard</h3>
+                        <p>
+                            Designed an interactive Power BI dashboard to convert raw insurance data into actionable
+                            insights for business decision-making.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Project: Food Delivery -->
+                <div class="project-card" onclick="openModal('food-delivery')">
+                    <div class="card-content">
+                        <h3>Food Delivery Time Prediction</h3>
+                        <p>
+                            Implemented a data science pipeline to predict food delivery times using historical
+                            operational data and ML models.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">CatBoost</span>
+                    </div>
+                </div>
+
+                <!-- Project: AWS Pipeline -->
+                <div class="project-card" onclick="openModal('aws-pipeline')">
+                    <div class="card-content">
+                        <h3>Automated CSV-to-JSON Pipeline</h3>
+                        <p>
+                            Built an end-to-end, serverless data pipeline on AWS that automatically converts incoming
+                            CSV files into JSON format.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">Glue</span>
+                        <span class="tech-tag">S3</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modal-body-content">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

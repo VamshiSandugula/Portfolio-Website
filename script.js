@@ -1,0 +1,147 @@
+const projectData = {
+    "drdo": {
+        title: "Machine Learning Internship – DRDO",
+        role: "Machine Learning Intern",
+        tech: ["Python", "Pandas", "Scikit-Learn", "SQL"],
+        description: `
+            <p>Designed and implemented end-to-end ML pipelines to predict customer term deposit subscriptions using real-world banking data.</p>
+            <ul>
+                <li>Compared <strong>Logistic Regression, Random Forest, and Naive Bayes</strong> models using accuracy, precision, recall, and ROC–AUC for robust evaluation.</li>
+                <li>Identified <strong>recall</strong> as the key business metric and selected Naive Bayes (53% recall) to minimize missed potential customers despite lower overall accuracy.</li>
+                <li>Analyzed customer demographic features such as age, job type, and marital status to derive business-relevant insights and improve model decision-making.</li>
+            </ul>
+        `
+    },
+    "fisheries": {
+        title: "AWS Data Engineering Capstone – Fisheries Analytics Pipeline",
+        role: "Data Engineer",
+        tech: ["Amazon S3", "AWS Cloud9", "AWS Glue", "Amazon Athena", "Pandas", "PyArrow", "Parquet", "SQL"],
+        description: `
+            <p>Designed and implemented a serverless data lake architecture on AWS to process and analyze global fisheries data (1950–2018) from the Sea Around Us research dataset.</p>
+            <ul>
+                <li>Built automated data ingestion and transformation workflows in <strong>AWS Cloud9</strong>, converting large raw CSV datasets into Parquet format using Pandas and PyArrow, significantly improving query performance.</li>
+                <li>Created a <strong>multi-zone S3 data lake</strong> (raw & curated layers) following data engineering best practices for scalability, reliability, and schema evolution.</li>
+                <li>Configured <strong>AWS Glue Crawlers and Glue Data Catalog</strong> to automatically infer schemas, manage metadata, and enable schema-on-read analytics.</li>
+                <li>Queried and transformed datasets using <strong>Amazon Athena (SQL)</strong>, building analytical views such as country-wise catch trends, EEZ vs High Seas fishing patterns, and Fiji fish catch value over time.</li>
+                <li>Performed multi-source data integration, cleaning, renaming, and standardizing columns to unify heterogeneous fisheries datasets across regions and fishing zones.</li>
+                <li>Derived actionable insights including long-term catch weight trends, species-level analysis (e.g., mackerel), and country-level fishing contributions, demonstrating real-world analytical use cases.</li>
+                <li>Optimized analytics cost and performance by leveraging columnar storage (Parquet), partitioned datasets, and serverless querying with Athena.</li>
+            </ul>
+        `
+    },
+    "rag-chatbot": {
+        title: "RAG Chatbot",
+        role: "AI Engineer",
+        tech: ["Python", "ChromaDB", "Sentence Transformers", "LLMs"],
+        description: `
+            <p>Developed a Retrieval-Augmented Generation (RAG) based personalized chatbot for a specific website to deliver accurate, grounded, and domain-specific answers instead of generic LLM responses.</p>
+            <ul>
+                <li>Implemented an end-to-end pipeline that crawls website content, performs text chunking, and converts textual data into dense vector embeddings using <strong>sentence-transformer</strong> models for semantic understanding.</li>
+                <li>Integrated <strong>ChromaDB</strong> as a vector database to store embeddings and enable fast similarity search for efficient context retrieval during question answering.</li>
+                <li>Designed a semantic search–driven retrieval mechanism that fetches the most relevant content at query time, significantly reducing hallucinations in generated responses.</li>
+                <li>Applied effective chunking strategies and embedding optimization to balance contextual richness and retrieval precision.</li>
+                <li>Enabled dynamic knowledge updates by supporting re-crawling and re-indexing of website content without retraining the language model.</li>
+                <li>Used conservative decoding and prompt-grounding techniques to ensure factual accuracy, response consistency, and controlled output generation.</li>
+                <li>Focused on data privacy and consistency, ensuring the chatbot responds strictly based on authorized website content.</li>
+            </ul>
+        `
+    },
+    "food-delivery": {
+        title: "Food Delivery Time Prediction",
+        role: "Data Scientist",
+        tech: ["Python", "Pandas", "Scikit-Learn", "XGBoost", "CatBoost"],
+        description: `
+            <p>Designed and implemented a complete data science pipeline to predict food delivery time (in minutes), starting from business problem understanding to model deployment–ready insights using real-world operational data.</p>
+            <ul>
+                <li>Performed extensive data preprocessing and EDA on noisy real-world data, handling missing values, skewed distributions, and outliers; identified key patterns such as right-skewed delivery times and strong dependency on distance, traffic, and weather.</li>
+                <li>Applied hypothesis testing (ANOVA, correlation analysis, peak vs non-peak tests) to statistically validate EDA insights, ensuring that observed patterns were data-driven and not random assumptions.</li>
+                <li>Engineered high-impact features including geospatial distance (Haversine), peak-hour indicators, and interaction features, significantly improving model performance and capturing real-world delivery constraints.</li>
+                <li>Built and evaluated multiple regression models (Random Forest, XGBoost, CatBoost) using MAE as the primary business metric, selecting <strong>CatBoost</strong> for its native categorical handling, reduced preprocessing complexity, stable residuals, and best generalization.</li>
+                <li>Translated model outputs into business insights, showing how accurate ETA prediction can reduce customer complaints, improve delivery planning, and enable dynamic ETA adjustments during peak traffic or adverse weather.</li>
+            </ul>
+        `
+    },
+    "insurance-dashboard": {
+        title: "Insurance Analytics Dashboard – Prism Insurance Pvt. Ltd",
+        role: "Data Analyst",
+        tech: ["Power BI", "DAX", "SQL", "Power Query"],
+        images: ["images/powerbi-1.jpg", "images/powerbi-2.jpg", "images/powerbi-3.jpg"],
+        description: `
+            <p>Designed and developed an interactive Power BI dashboard to convert raw insurance data (policies, claims, and customer feedback) into actionable insights for business decision-making.</p>
+            <ul>
+                <li>Cleaned and transformed multi-source data using <strong>Power Query</strong>, handling missing values, duplicates, and inconsistent formats, and built a relational data model for seamless filtering across visuals.</li>
+                <li>Created <strong>DAX measures and KPIs</strong> including total premium, total claims, total coverage, and active vs inactive policies to enable dynamic, real-time analysis.</li>
+                <li>Built dedicated dashboard pages for business overview, claims analysis, and customer sentiment, allowing stakeholders to drill down by policy type, age group, and claim status.</li>
+                <li>Applied text analytics and sentiment analysis using word clouds and sentiment scores to surface common customer issues and satisfaction trends.</li>
+                <li>Identified key insights such as high revenue from travel insurance, high claim rejection rates, low policy retention (~40% active), and customer pain points around claim delays.</li>
+            </ul>
+        `
+    },
+    "aws-pipeline": {
+        title: "Automated CSV-to-JSON Data Pipeline",
+        role: "Cloud Data Engineer",
+        tech: ["AWS S3", "AWS Lambda", "AWS Glue", "AWS IAM", "AWS CloudWatch"],
+        description: `
+            <p>Built an end-to-end, serverless data pipeline on AWS that automatically converts incoming CSV files into JSON format, enabling real-time data ingestion into a centralized cloud data lake.</p>
+            <ul>
+                <li>Implemented an event-driven architecture where Amazon S3 upload events trigger an <strong>AWS Lambda function</strong>, which orchestrates an AWS Glue ETL job for data transformation without any manual intervention.</li>
+                <li>Designed the ETL process using <strong>AWS Glue</strong> to read CSV files, apply schema transformations, and write structured JSON output to a separate S3 bucket for downstream analytics.</li>
+                <li>Configured AWS IAM roles and policies to securely manage permissions between S3, Lambda, and Glue, following least-privilege access principles.</li>
+                <li>Integrated AWS CloudWatch for logging, monitoring, and troubleshooting Lambda executions and Glue job runs, ensuring observability and reliability.</li>
+                <li>Architected the pipeline to be scalable, cost-efficient, and fault-tolerant, leveraging fully managed AWS services suitable for production-grade data workflows.</li>
+            </ul>
+        `
+    }
+};
+
+function openModal(projectId) {
+    const modal = document.getElementById('project-modal');
+    const content = document.getElementById('modal-body-content');
+    const data = projectData[projectId];
+
+    if (data) {
+        let imagesHtml = '';
+        if (data.images && data.images.length > 0) {
+            imagesHtml = `
+                <div class="modal-gallery">
+                    ${data.images.map(img => `<img src="${img}" alt="${data.title} Screenshot" class="modal-img">`).join('')}
+                </div>
+            `;
+        }
+
+        content.innerHTML = `
+            <div class="modal-header-content">
+                <h2>${data.title}</h2>
+                <div class="modal-tags">
+                    ${data.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
+                </div>
+            </div>
+            ${imagesHtml}
+            <div class="modal-description">
+                ${data.description}
+            </div>
+        `;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('project-modal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside content
+document.getElementById('project-modal').addEventListener('click', (e) => {
+    if (e.target.id === 'project-modal') {
+        closeModal();
+    }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});
