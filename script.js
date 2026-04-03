@@ -4,9 +4,39 @@ const projectData = {
         role: "Machine Learning Intern – DRDO",
         tech: ["Python", "Pandas", "Scikit-Learn", "Random Forest"],
         description: `
-            <p><strong>Project Overview:</strong> This project, completed during my internship at DRDO (Defence Research and Development Organisation), focuses on building a machine learning-based predictive maintenance system to identify whether a defense equipment component is likely to fail based on machine telemetry and operational data.</p>
-            <p>In mission-critical environments such as defense and industrial systems, unexpected equipment failure can lead to downtime, increased maintenance costs, and reduced operational reliability. The objective of this project was to leverage data analytics and machine learning to predict failure conditions in advance and support preventive maintenance decision-making.</p>
-            <p>The project involved data preprocessing, exploratory data analysis, feature engineering, model development, and comparative evaluation using multiple machine learning algorithms. Among the models tested, Random Forest Classifier delivered the best performance and emerged as the most effective model for identifying potential failure conditions.</p>
+            <p><strong>Introduction</strong><br>Modern equipment systems generate large amounts of operational and sensor-based telemetry data during usage. This data contains hidden patterns that can reveal early signs of degradation, overload, or abnormal behavior before a failure occurs. Traditional maintenance approaches are often inefficient and costly. Predictive maintenance offers a smarter alternative by using data to identify potential failures before breakdown happens. This project explores how machine learning can be used to analyze machine operating conditions, detect failure-related patterns, and classify whether a component is likely to fail.</p>
+
+            <h4>Problem Statement & Objectives</h4>
+            <p>The aim of this project was to build a machine learning model capable of predicting whether a defense equipment component would fail based on machine telemetry and operational parameters. Can sensor and operational machine data be used to accurately predict equipment failure and support predictive maintenance strategies?</p>
+            <p>Objectives included preprocessing telemetry data, performing feature engineering, and building/comparing multiple classification models to identify the most effective model for equipment failure prediction.</p>
+
+            <h4>Dataset & Features</h4>
+            <p>The project used the predictive_maintenance.csv dataset, containing 10,000 machine records with features such as:</p>
+            <ul>
+                <li><strong>Air & Process Temperature [K]</strong></li>
+                <li><strong>Rotational Speed [rpm] & Torque [Nm]</strong></li>
+                <li><strong>Tool Wear [min]</strong></li>
+            </ul>
+            <p>The target variable was binary: 0 → No Failure, 1 → Failure. The dataset had no missing values and was cleaned and One-Hot Encoded for modeling.</p>
+
+            <h4>Feature Engineering</h4>
+            <p>To improve predictive performance and better capture real-world machine behavior, additional domain-inspired features were engineered:</p>
+            <ul>
+                <li><strong>Machine Stress:</strong> Torque × Rotational Speed. Represents mechanical load or stress experienced by the equipment.</li>
+                <li><strong>Thermal Stress:</strong> Process Temperature − Air Temperature. Captures the relative temperature difference indicating potential overheating.</li>
+            </ul>
+
+            <h4>Machine Learning Models Used & Results</h4>
+            <p>Multiple models were trained on an 80/20 train-test split. Since failure detection is the goal, <strong>Recall</strong> was an especially important metric because missing an actual failure is far more costly than generating a false alert.</p>
+            <ul>
+                <li><strong>Logistic Regression:</strong> Strong baseline (97.4% Accuracy) but struggled to detect actual failure cases effectively (Recall: 0.30).</li>
+                <li><strong>Random Forest Classifier (Best Model):</strong> Delivered the best overall performance with <strong>98.25% Accuracy, 0.82 Precision, 0.54 Recall, and 0.65 F1-Score</strong> for failure prediction. Its ability to model non-linear interactions made it the strongest performer.</li>
+                <li><strong>Gaussian Naive Bayes:</strong> Used as a lightweight probabilistic baseline.</li>
+            </ul>
+
+            <h4>Challenges & Real-World Relevance</h4>
+            <p>A key challenge was <strong>class imbalance</strong> (failures are much rarer than normal operations), highlighting why Accuracy alone can be misleading in predictive maintenance problems.</p>
+            <p>This project demonstrates how machine learning can support early warning systems, maintenance scheduling optimization, and improved operational readiness in defense, industrial, and manufacturing environments critical to reliability.</p>
         `
     },
     "fisheries": {
