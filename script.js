@@ -51,19 +51,16 @@ const projectData = {
     },
 
     "rag-chatbot": {
-        title: "RAG Chatbot",
+        title: "Modular RAG Q&A Chatbot",
         role: "AI Engineer",
-        tech: ["Python", "ChromaDB", "Sentence Transformers", "LLMs"],
+        tech: ["FastAPI", "Streamlit", "LangChain", "ChromaDB", "GPT-4o-mini"],
         description: `
-            <p>Developed a Retrieval-Augmented Generation (RAG) based personalized chatbot for a specific website to deliver accurate, grounded, and domain-specific answers instead of generic LLM responses.</p>
             <ul>
-                <li>Implemented an end-to-end pipeline that crawls website content, performs text chunking, and converts textual data into dense vector embeddings using <strong>sentence-transformer</strong> models for semantic understanding.</li>
-                <li>Integrated <strong>ChromaDB</strong> as a vector database to store embeddings and enable fast similarity search for efficient context retrieval during question answering.</li>
-                <li>Designed a semantic search–driven retrieval mechanism that fetches the most relevant content at query time, significantly reducing hallucinations in generated responses.</li>
-                <li>Applied effective chunking strategies and embedding optimization to balance contextual richness and retrieval precision.</li>
-                <li>Enabled dynamic knowledge updates by supporting re-crawling and re-indexing of website content without retraining the language model.</li>
-                <li>Used conservative decoding and prompt-grounding techniques to ensure factual accuracy, response consistency, and controlled output generation.</li>
-                <li>Focused on data privacy and consistency, ensuring the chatbot responds strictly based on authorized website content.</li>
+                <li><strong>Full-Stack Architecture:</strong> Developed a production-ready document Q&A application featuring a robust FastAPI backend API and a dynamic, user-friendly Streamlit frontend interface.</li>
+                <li><strong>Document Ingestion & Processing:</strong> Implemented an automated text extraction and processing pipeline using LangChain to securely extract, clean, and smartly chunk text from uploaded PDF and DOCX files.</li>
+                <li><strong>Advanced Vector Retrieval:</strong> Integrated ChromaDB for efficient local vector storage, utilizing OpenAI's text-embedding-3-small models to power high-speed semantic search and retrieval of relevant document passages.</li>
+                <li><strong>Context-Aware Responses:</strong> Leveraged OpenAI's GPT-4o-mini alongside custom-engineered prompt templates to generate precise, highly relevant answers while providing transparent source references to perfectly mitigate AI hallucinations.</li>
+                <li><strong>Modular & Scalable Design:</strong> Architected the system with a clear separation of concerns (Ingestion, Retrieval, LLM, API), ensuring the codebase is heavily optimized and directly extensible for future advancements like Self-RAG, Agentic RAG, or Graph RAG.</li>
             </ul>
         `
     },
