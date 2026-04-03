@@ -1,15 +1,12 @@
 const projectData = {
     "drdo": {
-        title: "Machine Learning Internship – DRDO",
-        role: "Machine Learning Intern",
-        tech: ["Python", "Pandas", "Scikit-Learn", "SQL"],
+        title: "Defense Equipment Failure Prediction using Machine Learning",
+        role: "Machine Learning Intern – DRDO",
+        tech: ["Python", "Pandas", "Scikit-Learn", "Random Forest"],
         description: `
-            <p>Designed and implemented end-to-end ML pipelines to predict customer term deposit subscriptions using real-world banking data.</p>
-            <ul>
-                <li>Compared <strong>Logistic Regression, Random Forest, and Naive Bayes</strong> models using accuracy, precision, recall, and ROC–AUC for robust evaluation.</li>
-                <li>Identified <strong>recall</strong> as the key business metric and selected Naive Bayes (53% recall) to minimize missed potential customers despite lower overall accuracy.</li>
-                <li>Analyzed customer demographic features such as age, job type, and marital status to derive business-relevant insights and improve model decision-making.</li>
-            </ul>
+            <p><strong>Project Overview:</strong> This project, completed during my internship at DRDO (Defence Research and Development Organisation), focuses on building a machine learning-based predictive maintenance system to identify whether a defense equipment component is likely to fail based on machine telemetry and operational data.</p>
+            <p>In mission-critical environments such as defense and industrial systems, unexpected equipment failure can lead to downtime, increased maintenance costs, and reduced operational reliability. The objective of this project was to leverage data analytics and machine learning to predict failure conditions in advance and support preventive maintenance decision-making.</p>
+            <p>The project involved data preprocessing, exploratory data analysis, feature engineering, model development, and comparative evaluation using multiple machine learning algorithms. Among the models tested, Random Forest Classifier delivered the best performance and emerged as the most effective model for identifying potential failure conditions.</p>
         `
     },
     "fisheries": {
