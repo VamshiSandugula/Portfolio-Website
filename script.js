@@ -114,18 +114,17 @@ const projectData = {
             </ul>
         `
     },
-    "aws-pipeline": {
-        title: "Automated CSV-to-JSON Data Pipeline",
-        role: "Cloud Data Engineer",
-        tech: ["AWS S3", "AWS Lambda", "AWS Glue", "AWS IAM", "AWS CloudWatch"],
+    "databricks-pipeline": {
+        title: "Databricks Data Engineering Pipeline — FMCG Merger Analytics",
+        role: "Data Engineer",
+        tech: ["Python", "PySpark", "Databricks", "Delta Lake", "SQL", "AWS S3"],
         description: `
-            <p>Built an end-to-end, serverless data pipeline on AWS that automatically converts incoming CSV files into JSON format, enabling real-time data ingestion into a centralized cloud data lake.</p>
+            <p>Developed an end-to-end Databricks lakehouse pipeline on AWS S3 using the Medallion architecture (Bronze, Silver, Gold).</p>
             <ul>
-                <li>Implemented an event-driven architecture where Amazon S3 upload events trigger an <strong>AWS Lambda function</strong>, which orchestrates an AWS Glue ETL job for data transformation without any manual intervention.</li>
-                <li>Designed the ETL process using <strong>AWS Glue</strong> to read CSV files, apply schema transformations, and write structured JSON output to a separate S3 bucket for downstream analytics.</li>
-                <li>Configured AWS IAM roles and policies to securely manage permissions between S3, Lambda, and Glue, following least-privilege access principles.</li>
-                <li>Integrated AWS CloudWatch for logging, monitoring, and troubleshooting Lambda executions and Glue job runs, ensuring observability and reliability.</li>
-                <li>Architected the pipeline to be scalable, cost-efficient, and fault-tolerant, leveraging fully managed AWS services suitable for production-grade data workflows.</li>
+                <li>Ingested multi-source CSV datasets into <strong>Delta Lake</strong> tables using <strong>PySpark</strong> with metadata and lineage tracking.</li>
+                <li>Implemented data quality transformations including deduplication, null handling, and schema standardization.</li>
+                <li>Designed a star schema with conformed dimension tables and monthly fact tables, and built incremental ETL workflows using <strong>Delta Lake MERGE upserts</strong>.</li>
+                <li>Created <strong>Databricks SQL</strong> dashboards to analyze revenue trends and top customer insights.</li>
             </ul>
         `
     }
