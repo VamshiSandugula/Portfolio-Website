@@ -39,6 +39,16 @@ const projectData = {
             <p>This project demonstrates how machine learning can support early warning systems, maintenance scheduling optimization, and improved operational readiness in defense, industrial, and manufacturing environments critical to reliability.</p>
         `
     },
+    "flight-agent": {
+        title: "AI-Powered Multi-Agent Flight Booking System",
+        role: "AI Engineer",
+        tech: ["CrewAI", "LLMs", "Python", "AI Agents"],
+        description: `
+            <p>Developed an AI-Powered Multi-Agent Flight Booking System using CrewAI to automate and enhance the travel booking experience through AI-driven collaboration. The project was designed around multiple specialized agents, each assigned a specific role such as Flight Search Agent, Price Comparison Agent, Itinerary Planner, and Customer Assistance Agent.</p>
+            <p>The system works by taking a user’s travel query (source, destination, date, budget, preferences) and distributing tasks across agents. One agent retrieves available flight options, another compares pricing and schedules, while another recommends the most suitable itinerary based on user constraints such as cost, layovers, and timing. The assistant can also summarize travel options in a user-friendly way, helping users make faster and smarter booking decisions.</p>
+            <p>The core focus of the project was to understand agentic AI workflows, including task delegation, inter-agent communication, prompt design, orchestration logic, and tool integration. This project gave practical exposure to building real-world LLM applications that mimic collaborative human workflows and solve practical automation problems in the travel domain.</p>
+        `
+    },
     "fisheries": {
         title: "AWS Data Engineering Capstone – Fisheries Analytics Pipeline",
         role: "Data Engineer",
