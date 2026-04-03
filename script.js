@@ -49,23 +49,7 @@ const projectData = {
             <p>The core focus of the project was to understand agentic AI workflows, including task delegation, inter-agent communication, prompt design, orchestration logic, and tool integration. This project gave practical exposure to building real-world LLM applications that mimic collaborative human workflows and solve practical automation problems in the travel domain.</p>
         `
     },
-    "fisheries": {
-        title: "AWS Data Engineering Capstone – Fisheries Analytics Pipeline",
-        role: "Data Engineer",
-        tech: ["Amazon S3", "AWS Cloud9", "AWS Glue", "Amazon Athena", "Pandas", "PyArrow", "Parquet", "SQL"],
-        description: `
-            <p>Designed and implemented a serverless data lake architecture on AWS to process and analyze global fisheries data (1950–2018) from the Sea Around Us research dataset.</p>
-            <ul>
-                <li>Built automated data ingestion and transformation workflows in <strong>AWS Cloud9</strong>, converting large raw CSV datasets into Parquet format using Pandas and PyArrow, significantly improving query performance.</li>
-                <li>Created a <strong>multi-zone S3 data lake</strong> (raw & curated layers) following data engineering best practices for scalability, reliability, and schema evolution.</li>
-                <li>Configured <strong>AWS Glue Crawlers and Glue Data Catalog</strong> to automatically infer schemas, manage metadata, and enable schema-on-read analytics.</li>
-                <li>Queried and transformed datasets using <strong>Amazon Athena (SQL)</strong>, building analytical views such as country-wise catch trends, EEZ vs High Seas fishing patterns, and Fiji fish catch value over time.</li>
-                <li>Performed multi-source data integration, cleaning, renaming, and standardizing columns to unify heterogeneous fisheries datasets across regions and fishing zones.</li>
-                <li>Derived actionable insights including long-term catch weight trends, species-level analysis (e.g., mackerel), and country-level fishing contributions, demonstrating real-world analytical use cases.</li>
-                <li>Optimized analytics cost and performance by leveraging columnar storage (Parquet), partitioned datasets, and serverless querying with Athena.</li>
-            </ul>
-        `
-    },
+
     "rag-chatbot": {
         title: "RAG Chatbot",
         role: "AI Engineer",
